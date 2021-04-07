@@ -1,0 +1,1 @@
+# cpanel-autoinstall-wordpress-hook
