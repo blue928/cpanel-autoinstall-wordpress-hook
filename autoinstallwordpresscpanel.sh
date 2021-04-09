@@ -12,7 +12,7 @@ CUSTOMEREMAIL=$(python3 -c "import sys, json; print json.load(open('$TMPFILE'))[
 ## It would be possible to add additinal logic to this script so that WordPress is only installed for certain packages
 # PACKAGE=$(python -c "import sys, json; print json.load(open('$TMPFILE'))['data']['plan']")
 
-cat > ./whatgoeshere
+echo $TMPFILE > ./whatgoeshere
 
 #rm -f $TMPFILE
 
