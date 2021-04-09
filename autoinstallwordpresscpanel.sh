@@ -5,10 +5,10 @@
 
 TMPFILE="$(mktemp -p /tmp wp-auto-install-XXXXXXXX)"
 cat "${1:-/dev/stdin}" > $TMPFILE
-USER=$(python3 -c "import sys, json; print json.load(open('$TMPFILE'))['data']['user']")
-PASS=$(python3 -c "import sys, json; print json.load(open('$TMPFILE'))['data']['pass']")
-DOMAIN=$(python3 -c "import sys, json; print json.load(open('$TMPFILE'))['data']['domain']")
-CUSTOMEREMAIL=$(python3 -c "import sys, json; print json.load(open('$TMPFILE'))['data']['contactemail']")
+USER=$(python3 -c "import sys, json; print(json.load(open('$TMPFILE'))['data']['user'])")
+PASS=$(python3 -c "import sys, json; print(json.load(open('$TMPFILE'))['data']['pass'])")
+DOMAIN=$(python3 -c "import sys, json; print(json.load(open('$TMPFILE'))['data']['domain'])")
+CUSTOMEREMAIL=$(python3 -c "import sys, json; print(json.load(open('$TMPFILE'))['data']['contactemail'])")
 
 ## The following variable contains the name of the Package that was assigned to the account.
 ## It would be possible to add additinal logic to this script so that WordPress is only installed for certain packages
