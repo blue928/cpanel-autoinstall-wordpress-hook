@@ -14,16 +14,16 @@ CUSTOMEREMAIL=$(python3 -c "import sys, json; print(json.load(open('$TMPFILE'))[
 ## It would be possible to add additinal logic to this script so that WordPress is only installed for certain packages
 # PACKAGE=$(python -c "import sys, json; print json.load(open('$TMPFILE'))['data']['plan']")
 
-echo $TMPFILE > ./whatgoeshere
+#echo $TMPFILE > ./whatgoeshere
 
-#rm -f $TMPFILE
+rm -f $TMPFILE
 
 #Softaculous
 /usr/local/cpanel/3rdparty/bin/php /usr/local/cpanel/whostmgr/docroot/cgi/softaculous/cli.php \
     --install \
     --panel_user=$USER \
     --panel_pass=$PASS \
-    --soft=26 \
+    --soft=10002 \
 #    --softdirectory=test \
 #    --admin_username=admin \
 #    --admin_pass=pass
