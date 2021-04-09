@@ -21,8 +21,8 @@ echo $TMPFILE > ./whatgoeshere
 #Softaculous
 /usr/local/cpanel/3rdparty/bin/php /usr/local/cpanel/whostmgr/docroot/cgi/softaculous/cli.php \
     --install \
-    --panel_user=USER \
-    --panel_pass=PASS \
+    --panel_user=$USER \
+    --panel_pass=$PASS \
     --soft=26 \
 #    --softdirectory=test \
 #    --admin_username=admin \
